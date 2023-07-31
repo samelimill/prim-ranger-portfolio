@@ -10,17 +10,20 @@
 }
 
 header {
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
     font-family: "Courier New", Courier, Arial, sans-serif;
     background-image: linear-gradient(180deg, grey, white);
 }
 
 /*-- text and link style for name in site header --*/
 header h1 a{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bolder;
     text-decoration: none;
     color: black;
@@ -37,17 +40,14 @@ header nav {
     margin-left: 30px;
 }
 
-
-
 header nav a:hover{
     text-decoration: underline;
     color: yellow;
 }
 
-
 /* gotta source this */
 #splash {
-    height: 100px;
+    height: 300px;
     width: 100%;
     margin-bottom: 20px;
     background-image: url("../images/photos_2022_6_25_fst_abstract-graphic.jpg");
@@ -55,9 +55,9 @@ header nav a:hover{
     background-position: center;
 }
 
+/*-- text style for section headings --*/
 section {
     width: 100%;
-    margin: 10px, 20px;
 }
 
 section h2 {
@@ -68,39 +68,119 @@ section h2 {
    border-bottom: 1px solid grey;
 }
 
+/*-- section heading offset --*/
 .section-head-style {
     margin-left: 20px;
 }
 
+/*-- styling for about content container --*/
 .about-text {
     min-height: 160px;
+    border: 1px dotted black;
+    margin: 20px;
 }
 
+/*-- portrait placement and size --*/
 #portrait {
-    display: inline;
     float: left;
+    margin-left: 10px;
     height: 150px;
 }
 
+/*-- styling for about section text --*/
 .about-text p {
     font-family: Arial, "Lucida Sans Unicode", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 10px 20px;
     text-align: justify;
 }
 
+/*-- box for work samples --*/
+.works-container {
+    display:flex;
+    justify-content: center;
+    border: 1px dotted black;
+    margin: 20px;
+}
+
+/*-- grid setup for work samples --*/
+.works-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 25px;
+    width: 80vw;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.works-content > * {
+    border: 1px solid yellow;
+}
+
+.work-lead {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-image: url("../images/keyboard-TorstenDettlaff.jpg");
+    background-size: cover;
+}
+
+.work-sub1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    background-image: url("../images/lights-AntonAtanasov.jpg");
+    background-size: cover;
+}
+
+.work-sub2 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    background-image: url("../images/mixer-DavidYohanes.jpg");
+    background-size: cover;
+}
+
+.work-sub3 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 9;
+    grid-row-end: 12;
+    background-image: url("../images/organum-TimGouw.jpg");
+    background-size: cover;
+}
+
+.work-sub4 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 12;
+    background-image: url("../images/stick-GeorgeBecker.jpg");
+    background-size: cover;
+}
+
+.contact-links {
+    display: flex;
+    flex: wrap;
+    justify-content: space-around;  
+    margin:  20px 20px 50px 20px;
+}
+
+.contact-links > * {
+    font-family: "Courier New", Courier, Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    display: inline-block;
+    height: 80px;
     text-align: center;
     font-family: Courier, sans-serif;
     font-size: 1em;
-    background-image: linear-gradient(0deg, grey, white);
-}
-
-footer p {
-    margin-bottom: 20px;
+    background-image: linear-gradient(0deg, grey, rgba(255, 0 ,0 ,0));
 }
