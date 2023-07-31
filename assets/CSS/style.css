@@ -29,20 +29,25 @@ header h1 a{
     color: black;
 }
 
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    padding: 10px;
+}
+
 header nav a{
     font-size: 1em;
     text-decoration: none;
     color: black;
-}
-
-header nav {
-    align-content: center;
-    margin-left: 30px;
+    padding: 5px;
 }
 
 header nav a:hover{
-    text-decoration: underline;
     color: yellow;
+    background: rgba(0, 0 ,0 ,0.2);
+    border-radius:5px;
+    transition-duration: 1s;
 }
 
 /* gotta source this */
@@ -118,6 +123,12 @@ section h2 {
     border: 1px solid yellow;
 }
 
+.works-content > *:hover {
+    box-shadow: 10px 10px 1px grey;
+    transition-duration: 1.5s;
+}
+
+
 .work-lead {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -174,6 +185,23 @@ section h2 {
     font-family: "Courier New", Courier, Arial, sans-serif;
     text-decoration: none;
     color: black;
+    padding:10px;
+    margin:10px;
+}
+
+.contact-links > *:hover {
+    color: black;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    transition-duration: 1s;
+    border: 1px solid grey;
+}
+
+.contact-links >*:active {
+    color: black;
+    background: rgba(153, 153, 153, 0.2);
+    border: 1px solid yellow;
+    transition-duration: .2s;
 }
 
 footer {
