@@ -130,12 +130,26 @@ section h2 {
 
 
 .work-lead {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 6;
     background-image: url("../images/keyboard-TorstenDettlaff.jpg");
     background-size: cover;
+    z-index: 10;
+}
+
+.work-lead:hover {
+   background: aqua;
+}
+
+.work-lead > div {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 100;
+   color: #ffffff;
 }
 
 .work-sub1 {
