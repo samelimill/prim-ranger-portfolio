@@ -19,6 +19,7 @@ header {
     width: 100%;
     font-family: "Courier New", Courier, Arial, sans-serif;
     background-image: linear-gradient(180deg, grey, white);
+    z-index: 10;
 }
 
 /*-- text and link style for name in site header --*/
@@ -75,11 +76,12 @@ section h2 {
 
 /*-- section heading offset --*/
 .section-head-style {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 /*-- styling for about content container --*/
 .about-text {
+    display: block;
     min-height: 160px;
     border: 1px dotted black;
     margin: 20px;
@@ -112,22 +114,12 @@ section h2 {
 .works-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 25px;
+    grid-auto-rows: 5vw;
     width: 80vw;
     gap: 20px;
     padding: 20px;
     justify-content: center;
 }
-
-.works-content > * {
-    border: 1px solid yellow;
-}
-
-.works-content > *:hover {
-    box-shadow: 10px 10px 1px grey;
-    transition-duration: 1.5s;
-}
-
 
 .work-lead {
     position: relative;
@@ -137,55 +129,104 @@ section h2 {
     grid-row-end: 6;
     background-image: url("../images/keyboard-TorstenDettlaff.jpg");
     background-size: cover;
-    z-index: 10;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, sans-serif;
 }
 
-.work-lead:hover {
-   background: aqua;
-}
-
-.work-lead > div {
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   z-index: 100;
-   color: #ffffff;
+.work-lead::before{
+    content: "Keyboard!";
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1;
 }
 
 .work-sub1 {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 6;
     grid-row-end: 9;
     background-image: url("../images/lights-AntonAtanasov.jpg");
     background-size: cover;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.work-sub1::before{
+    content: "Lights!";
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
 }
 
 .work-sub2 {
+    position: relative;
     grid-column-start: 7;
     grid-column-end: 13;
     grid-row-start: 6;
     grid-row-end: 9;
-    background-image: url("../images/mixer-DavidYohanes.jpg");
+    background-image: url("../images/mixer-DavidYohanes.png");
     background-size: cover;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.work-sub2::before{
+    content: "Mixer!";
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
 }
 
 .work-sub3 {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 9;
     grid-row-end: 12;
     background-image: url("../images/organum-TimGouw.jpg");
     background-size: cover;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.work-sub3::before{
+    content: "Organ!";
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
 }
 
 .work-sub4 {
+    position: relative;
     grid-column-start: 7;
     grid-column-end: 13;
     grid-row-start: 9;
     grid-row-end: 12;
     background-image: url("../images/stick-GeorgeBecker.jpg");
     background-size: cover;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+.work-sub4::before{
+    content: "Arcade!";
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.works-content > * {
+    border: 3px solid yellow;
+}
+
+.works-content > *:hover {
+    box-shadow: 10px 10px 1px grey;
+    transition-duration: 1.2s;
+    opacity: 50%;
 }
 
 .contact-links {
@@ -225,4 +266,18 @@ footer {
     font-family: Courier, sans-serif;
     font-size: 1em;
     background-image: linear-gradient(0deg, grey, rgba(255, 0 ,0 ,0));
+}
+
+@media screen and (min-width: 651px) {
+    header {
+        justify-content: center;
+    }    
+}
+
+@media screen and (min-width: 910px) {
+    .about-text {
+        margin: auto;
+        margin-bottom: 20px;
+        width: 900px;
+    }
 }
