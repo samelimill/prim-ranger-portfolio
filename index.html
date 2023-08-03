@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+<!-- backend page setup -->
 <head>
     <meta charset="UTF-8" />
     <meta keywords="Web Design" />
@@ -10,9 +11,12 @@
     <title>Samuel Milligan Web Design</title>
 </head>
 
+<!-- beginning of content-->
 <body>
     <header>
+        <!-- name in header with reset link-->
         <h1 class="name-link"><a href="#">samuel milligan</a></h1>
+        <!-- nav bar links have a seperate internal container to wrap independently as viewport changes -->
         <nav>
             <a href="#about-section">about</a>
             <a href="#works-section">works</a>
@@ -20,11 +24,15 @@
             <a href="assets/fake-resume.pdf">resume</a>
         </nav>
     </header>
+    <!-- 'hero' image to break page -->
     <figure id="splash"></figure>
-    <div class="content">
+    <!-- beginning of main body segment -->
+    <main class="content">
+        <!-- About section limits width to stay readable, looked weird if it stretched across the page -->
         <section id="about-section">
             <h2 class="section-headings"><p class="section-head-style">about</p></h2>
             <article class="about-text">
+                <!-- Recent Photo with text wrap-->
                 <img id="portrait" src="assets\images\transparent-face.png" alt="Sam's Face">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -49,6 +57,7 @@
         </section>
         <section id="works-section">
             <h2 class="works"><span class="section-head-style">works</span></h2>
+            <!-- Works container lays out the items in a grid with several animations on hover -->
             <div class="works-container">
                 <section class="works-content ">    
                     <a href="https://www.google.com" class="work-lead" alt="Midi Keyboard"></a>
@@ -63,12 +72,12 @@
             <h2 class="contact"><span class="section-head-style">contact</span></h2>
             <section class="contact-links">
                 <a href="tel:515-971-9153">call me</a>
-                <a href="mailto: samelimill@gmail.com">email me</a>
+                <a href="mailto:samelimill@gmail.com">email me</a>
                 <a href="https://github.com/samelimill">github</a>
                 <a href="https://www.instagram.com/samelimil/">instagram</a>
             </section>
         </section>
-    </div>
+    </main>
     <footer>
         <h3>made by the subject matter</h3>
         <p>
