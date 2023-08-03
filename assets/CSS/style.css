@@ -1,17 +1,12 @@
-/*-- :root {
-
-} --*/
-
-/*-- catch-all viewport stylings --*/
+/* catch-all viewport stylings */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* container, text font, and gradient for header and nav bar */
 header {
-    position: fixed;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,10 +14,9 @@ header {
     width: 100%;
     font-family: "Courier New", Courier, Arial, sans-serif;
     background-image: linear-gradient(180deg, grey, white);
-    z-index: 10;
 }
 
-/*-- text and link style for name in site header --*/
+/* text and link style for name in site header */
 header h1 a{
     font-size: 2em;
     font-weight: bolder;
@@ -30,6 +24,7 @@ header h1 a{
     color: black;
 }
 
+/* sub-container for nav bar */
 header nav {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +32,7 @@ header nav {
     padding: 10px;
 }
 
+/* nav bar text style */
 header nav a{
     font-size: 1em;
     text-decoration: none;
@@ -44,6 +40,7 @@ header nav a{
     padding: 5px;
 }
 
+/* hover animation for nav bar links */
 header nav a:hover{
     color: yellow;
     background: rgba(0, 0 ,0 ,0.2);
@@ -51,7 +48,7 @@ header nav a:hover{
     transition-duration: 1s;
 }
 
-/* gotta source this */
+/* hero image */
 #splash {
     height: 300px;
     width: 100%;
@@ -61,20 +58,22 @@ header nav a:hover{
     background-position: center;
 }
 
-/*-- text style for section headings --*/
+/* allows line breaks under section heads to cross the entire screen */
 section {
     width: 100%;
 }
 
+/* text style for section headings */
 section h2 {
    font-family: "Courier New", Courier, Arial, sans-serif;
    font-size: 2em;
    width: 100%;
    font-weight: bolder;
+   margin-bottom: 20px;
    border-bottom: 1px solid grey;
 }
 
-/*-- section heading offset --*/
+/*-- section heading text offset --*/
 .section-head-style {
     margin-left: 30px;
 }
@@ -121,6 +120,7 @@ section h2 {
     justify-content: center;
 }
 
+/* work samples and tags, laid out in .works-content grid */
 .work-lead {
     position: relative;
     grid-column-start: 1;
@@ -134,7 +134,7 @@ section h2 {
 }
 
 .work-lead::before{
-    content: "Keyboard!";
+    content: ".keyboard";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -154,7 +154,7 @@ section h2 {
 }
 
 .work-sub1::before{
-    content: "Lights!";
+    content: ".lights";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -173,7 +173,7 @@ section h2 {
 }
 
 .work-sub2::before{
-    content: "Mixer!";
+    content: ".mixer";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -192,7 +192,7 @@ section h2 {
 }
 
 .work-sub3::before{
-    content: "Organ!";
+    content: ".organ";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -211,24 +211,26 @@ section h2 {
 }
 
 .work-sub4::before{
-    content: "Arcade!";
+    content: ".arcade";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
 }
 
-
-
+/* sets border for works items */
 .works-content > * {
     border: 3px solid yellow;
+    opacity: 50%
 }
 
-.works-content > *:hover {
+/* animation for hover on works items */
+.works-content >*:hover {
     box-shadow: 10px 10px 1px grey;
     transition-duration: 1.2s;
-    opacity: 50%;
+    opacity: 100%;
 }
 
+/* container for contact links */
 .contact-links {
     display: flex;
     flex: wrap;
@@ -236,6 +238,7 @@ section h2 {
     margin:  20px 20px 50px 20px;
 }
 
+/* text style for contact links */
 .contact-links > * {
     font-family: "Courier New", Courier, Arial, sans-serif;
     text-decoration: none;
@@ -244,14 +247,16 @@ section h2 {
     margin:10px;
 }
 
+/* animation for hover on contact links */
 .contact-links > *:hover {
     color: black;
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
+    border-radius: 20px;
     transition-duration: 1s;
     border: 1px solid grey;
 }
 
+/* animation for click on contact links */
 .contact-links >*:active {
     color: black;
     background: rgba(153, 153, 153, 0.2);
@@ -259,6 +264,7 @@ section h2 {
     transition-duration: .2s;
 }
 
+/* container for footer, text font and size, and gradient */
 footer {
     width: 100%;
     height: 80px;
@@ -268,16 +274,34 @@ footer {
     background-image: linear-gradient(0deg, grey, rgba(255, 0 ,0 ,0));
 }
 
+/* set footer color and remove link styling from name */
+footer p > a {
+    color:black;
+    text-decoration: none;
+}
+
+/* justify header to restrict width after 650px width */
 @media screen and (min-width: 651px) {
     header {
         justify-content: center;
     }    
 }
 
-@media screen and (min-width: 910px) {
+/* restrict width of about, works, and contact sections after 910px width */
+@media screen and (min-width: 909px) {
     .about-text {
         margin: auto;
         margin-bottom: 20px;
         width: 900px;
+    }
+
+    .works-container {
+        margin: 20px auto;
+        width: 900px;
+    }
+
+    .contact-links {
+        width: 900px;
+        margin: 20px auto 50px auto;
     }
 }
