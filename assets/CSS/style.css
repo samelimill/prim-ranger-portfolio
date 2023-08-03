@@ -280,6 +280,28 @@ footer p > a {
     text-decoration: none;
 }
 
+/* tooltip setup for name in copyright line */
+.tt {
+    position: relative;
+}
+
+.tt .tt-txt {
+    position: absolute;
+    visibility: hidden;
+    width: 200px;
+    font-size: 1em;
+    background-color: rgba(100,100,100,1);
+    color: yellow;
+    border-radius: 10px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.tt:hover .tt-txt {
+    visibility: visible;
+}
+
 /* justify header to restrict width after 650px width */
 @media screen and (min-width: 651px) {
     header {
