@@ -127,14 +127,14 @@ section h2 {
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 6;
-    background-image: url("../images/keyboard-TorstenDettlaff.jpg");
+    background-image: url("../images/horiseon.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-lead::before{
-    content: ".keyboard";
+    content: ".module1";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -147,14 +147,14 @@ section h2 {
     grid-column-end: 7;
     grid-row-start: 6;
     grid-row-end: 9;
-    background-image: url("../images/lights-AntonAtanasov.jpg");
+    background-image: url("../images/samelimill.github.io_prework-study-guide_.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-sub1::before{
-    content: ".lights";
+    content: ".prework";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
