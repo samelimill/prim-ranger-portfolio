@@ -127,14 +127,14 @@ section h2 {
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 6;
-    background-image: url("../images/horiseon.png");
+    background-image: url("../images/eventfinder.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-lead::before{
-    content: ".module1";
+    content: ".event-finder";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -166,14 +166,14 @@ section h2 {
     grid-column-end: 13;
     grid-row-start: 6;
     grid-row-end: 9;
-    background-image: url("../images/mixer-DavidYohanes.png");
+    background-image: url("../images/horiseon.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-sub2::before{
-    content: ".mixer";
+    content: ".horiseon-refactor";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -185,14 +185,14 @@ section h2 {
     grid-column-end: 7;
     grid-row-start: 9;
     grid-row-end: 12;
-    background-image: url("../images/organum-TimGouw.jpg");
+    background-image: url("../images/password-gen.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-sub3::before{
-    content: ".organ";
+    content: ".password-generator";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
@@ -204,14 +204,14 @@ section h2 {
     grid-column-end: 13;
     grid-row-start: 9;
     grid-row-end: 12;
-    background-image: url("../images/stick-GeorgeBecker.jpg");
+    background-image: url("../images/weather-report.png");
     background-size: cover;
     text-decoration: none;
     font-family: 'Courier New', Courier, sans-serif;
 }
 
 .work-sub4::before{
-    content: ".arcade";
+    content: ".weather-report";
     background-color: yellow;
     margin: 10px;
     padding: 10px;
